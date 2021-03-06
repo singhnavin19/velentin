@@ -1,0 +1,28 @@
+{% extends 'HomePage.html'%}
+
+{%block content %}
+<link rel="stylesheet" href="static/test.css">
+<br><br>
+<h1 class="green">Add Two nos Page </h1>
+{{std1.name}} {{std1.id }}
+
+<form action="addition">
+    <!-- <form action="addition" method="POST">
+    {% csrf_token%} -->
+    <label for="No1">No1</label>
+    <input type="text" name="no1">
+    <label for="No2">No2</label>
+    <input type="text" name="no2">
+    <select name="opt">
+        <option value="1">Add</option>
+        <option value="2">Substarct</option>
+
+    </select>
+    <input type="submit" value="Result">
+
+</form>
+<br>
+Result is <b>
+    {{result}}
+</b>
+{%endblock%}

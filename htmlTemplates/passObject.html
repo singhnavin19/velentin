@@ -1,0 +1,33 @@
+{% extends 'HomePage.html' %}
+{% block content %}
+    <h1>Manual student table</h1>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>amit</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>lokesh</td>
+        </tr>
+    </table>
+  <h1>Object table</h1>
+  <table border="1">
+      <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>know django(Yes/No)</th>
+      </tr>
+      {%for s in students%}  
+        <tr>
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{% if s.knowDjango%} Yes {%else%} No {%endif%}</td>
+        </tr>
+      {%endfor%} 
+    </table>
+{%endblock%} 
